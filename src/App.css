@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+:root {
+  --primary: #39AEBC;
+  --piece: #fff;
+  --positive: #41B494;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.modal-container {
+  background-color: #999999;
+  width: 100%;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.modal-header {
+  padding: 16px 5rem;
+  background-color: var(--primary);
+  color: var(--piece);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-trigger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-trigger-btn button {
+  padding: 16px 24px;
+  border: 1px solid var(--piece);
+  color: var(--piece);
+  margin: 2rem 6rem;
+}
+
+.segment-name {
+  margin: 2rem 0;
+}
+
+.segment-name label {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.segment-name input,
+.created-segment select,
+.add-segment-options select {
+  border: 1px solid #000;
+  outline: none;
+  padding: 4px 18px;
+  width: 100%;
+  height: 50px;
+  margin-top: 18px;
+}
+
+.new-schema-link {
+  margin: 2rem 0;
+}
+
+.new-schema-link a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  padding-left: 8px;
+}
+
+.new-schema-link span {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.primary-btn {
+  background-color: var(--positive) !important;
+  color: var(--piece) !important;
+}
+
+.secondary-btn {
+  color: red !important;
+  background-color: var(--piece) !important;
+}
+
+.error-msg {
+  color: red;
+  padding-top: 8px;
+}
+
+.d-none {
+  display: none;
 }
