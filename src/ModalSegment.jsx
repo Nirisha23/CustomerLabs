@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, Button, useDisclosure } from '@chakra-ui/react'
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, Button } from '@chakra-ui/react'
 import ChevronLeft from './Assets/left-chevron.png'
 
 function ModalSegment() {
@@ -8,7 +8,6 @@ function ModalSegment() {
     const [selectedSchema, setSelectedSchema] = useState('');
     const [selectedSchemas, setSelectedSchemas] = useState([]);
     const [errorMessage, setErrorMessage] = useState(false)
-    // const { onClose } = useDisclosure()
 
     const handleModalClick = () => {
         setIsModalOpen(true);
@@ -98,7 +97,7 @@ function ModalSegment() {
                     </ModalBody>
 
                     <ModalFooter style={{ flexDirection: 'row-reverse' }}>
-                        <Button className='secondary-btn'>Cancel</Button>
+                        <Button className='secondary-btn' onClick={() => setIsModalOpen(false)}>Cancel</Button>
                         <Button mr={3} className='primary-btn' onClick={sendDataToServer}>
                             Save Segment
                         </Button>
